@@ -317,6 +317,20 @@ h4 {
   color: #80AB9E;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   top: 30px;
@@ -334,7 +348,8 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1500px;
+  max-width: 1500px;
+  width: 100%;
   height: 150px;
   background: rgba(9, 37, 30, 0.3);
   border-radius: 100px;
@@ -596,6 +611,33 @@ h4 {
   -webkit-transform: translateY(-5%);
       -ms-transform: translateY(-5%);
           transform: translateY(-5%);
+}
+
+.achievements .partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  height: 260px;
+  padding: 0 130px;
+  background: rgba(9, 37, 30, 0.3);
+  border-radius: 100px;
+}
+
+.achievements .partners svg {
+  opacity: 0.15;
+  color: #00E3A5;
 }
 @supports (-webkit-appearance:none){
 .home{background-image:url(../img/home-background.webp)}
