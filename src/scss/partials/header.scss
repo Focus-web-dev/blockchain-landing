@@ -1,0 +1,100 @@
+.header {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 1500px;
+    height: 150px;
+
+    background: rgba(9, 37, 30, .3);
+    border-radius: 100px;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logotype {
+            font-weight: 400;
+            font-size: 45px;
+    
+            color: $white;
+    
+            span {
+                color: $mainColor;
+            }
+    
+            transition: color .3s ease-in-out;
+    
+            &:hover,
+            &:focus {
+                color: $mainColor;
+            }
+        }
+    
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                margin-right: 100px;
+                
+                &__item {
+                    position: relative;
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: calc(100% + 8px);
+                        left: 0;
+                        right: 100%;
+                    
+                        display: block;
+                        height: 4px;
+                        border-radius: 29px;
+                    
+                        background: $white;
+                
+                        transition: right 0.3s ease-in-out;
+                    }
+    
+                    &:hover,
+                    &:focus {
+                        &::after {
+                            right: 25%;
+                        }
+                    }
+    
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: 0.02em;
+    
+                    color: $white;
+    
+                    &:not(:last-child) {
+                        margin-right: 72px;
+                    }
+    
+                    &_active {
+                        color: $mainColor;
+    
+                        &::after {
+                            background: $mainColor;
+                            right: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
