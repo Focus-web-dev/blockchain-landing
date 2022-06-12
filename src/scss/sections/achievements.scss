@@ -1,0 +1,52 @@
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .achievements-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &__item {
+            z-index: 5;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 150%;
+                text-align: center;
+
+                color: $mainColor;
+                margin-bottom: 5px;
+            }
+
+            p {
+                color: #9E9E9E;
+            }
+
+            &:not(:last-child) {
+                margin-right: 170px;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        transform: translateY(-5%);
+    }
+}
